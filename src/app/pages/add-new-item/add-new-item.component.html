@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="row" style="padding: 25px">
+  <div class="col-md-12">
+    <h4>Add New Item</h4>
+  </div>
+    <div class="col-md-5">
+      <form (submit)="saveNewItem()">
+        <div class="form-group">
+          <label for="itemName">Item Name</label>
+          <input type="text" class="form-control" id="itemName" name="itemName" placeholder="Enter item name" [(ngModel)]="item.itemName">
+        </div>
+        <div class="form-group">
+          <label for="itemCategory">Item Category</label>
+          <select class="form-control" id="itemCategory" name="itemCategory" placeholder="Enter item category" [(ngModel)]="item.itemCategory">
+            <option selected>-SELECT-</option>
+            <option>Mobile Phone</option>
+            <option>Watch</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="costPrice">Cost Price</label>
+          <input type="number" class="form-control text-right" id="costPrice" name="costPrice" placeholder="Enter Cost Price" [(ngModel)]="item.costPrice">
+        </div>
+        <div class="form-group">
+          <label for="sellingPrice">Selling Price</label>
+          <input type="number" class="form-control text-right" id="sellingPrice" name="sellingPrice" placeholder="Enter Selling Price" [(ngModel)]="item.sellingPrice">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+</div>
